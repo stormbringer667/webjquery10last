@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Clinic - Kazakhstan's First Digital Rehabilitation Center</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<style>
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('res/backgrmain.png');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0;
+            color: white;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(43, 108, 176, 0.3), rgba(128, 90, 213, 0.3));
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .achievement-banner {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .custom-btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-btn-primary:hover {
+            background-color: #2457A0;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+        }
+
+        .custom-btn-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: 2px solid white;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-btn-secondary:hover {
+            background-color: white;
+            color: var(--accent-purple);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .value-card {
+            background-color: var(--light-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-wrapper {
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--primary-blue);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .icon-wrapper i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: var(--dark-text);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-blue);
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <img src="res/logo/logo.png" alt="Logo" height="35" class="d-inline-block align-text-top">           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tech.html">Tech</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                    <div class="search-results">
+                        Home
+                    </div>
+                    <div class="search-results">
+                        About
+                    </div>
+                    <div class="search-results">
+                        Help
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center hero-text">
+                    <h1 id="centerName" class="display-3 fw-bold mb-4">Kazakhstan's First Digital Rehabilitation Center</h1>
+                    <p class="lead mb-5 fs-4">Pioneering digital healthcare solutions for enhanced recovery and rehabilitation</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <button id="bookBtn" type="button" class="custom-btn-primary text-decoration-none btn-lg" data-bs-toggle="modal" data-bs-target="#consultationModal">
+                            Book a Consultation <i class="fas fa-calendar-alt ms-2"></i>
+                        </button>
+                        <button type="button" class="custom-btn-secondary text-decoration-none btn-lg" data-bs-toggle="modal" data-bs-target="#technologyModal">
+                            Explore Our Technology <i class="fas fa-chevron-right ms-2"></i>
+                        </button>
+                    </div>                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Banner -->
+    <div class="achievement-banner py-3">
+        <div class="container">
+            <p id="date" class="text-center mb-0 lead">
+                Proudly partnered with leading global rehabilitation centers
+            </p>
+        </div>
+    </div>
+
+    
+
+    <!-- Mission and Values -->
+    <section class="py-5">
+        <div class="container">
+            <h2 id="low" class="text-center mb-5">Our Mission & Values</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Patient-Centered Care</h3>
+                        <p class="mb-0">Tailored rehabilitation programs designed for individual needs and goals</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Innovation in Recovery</h3>
+                        <p class="mb-0">State-of-the-art technology integrated with proven rehabilitation methods</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Excellence in Care</h3>
+                        <p class="mb-0">Committed to achieving the highest standards in rehabilitation services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Patient Counter Section -->
+    <section class="container">
+        <div class="patient-counter text-center">
+            <div class="progress-count">0</div>
+            <h3>Patients Successfully Treated</h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+<section class="success-stories py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 id="stor" class="display-5 fw-bold mb-3">Success Stories</h2>
+            <p class="lead text-muted">Real stories from our patients who achieved their recovery goals</p>
+        </div>
+
+        <!-- Main Testimonial Carousel -->
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                    <div class="testimonial-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 800px;">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img src="res/portrait/Azamat.png" alt="Azamat Nurlybekov" class="rounded-circle img-fluid mx-auto d-block" style="width: 200px; height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="lead mb-3"><i class="fas fa-quote-left me-2 text-primary"></i>After my ACL injury, I thought my football career was over. RC Clinic's innovative approach and dedicated team helped me return to professional football stronger than ever. Their combination of traditional therapy and cutting-edge technology made all the difference.<i class="fas fa-quote-right ms-2 text-primary"></i></p>
+                                <h5 id="patientName" class="mb-1">Azamat Nurlybekov</h5>
+                                <p id="obj" class="text-muted">Professional Football Player</p>
+                                <div class="mt-3">
+                                    <span class="badge bg-success me-2">Sports Injury</span>
+                                    <span class="badge bg-primary">6 Months Recovery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 800px;">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img src="res/portrait/Dinara.png" alt="Dinara Saduakassova" class="rounded-circle img-fluid mx-auto d-block" style="width: 200px; height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="lead mb-3"><i class="fas fa-quote-left me-2 text-primary"></i>The virtual reality therapy sessions were both engaging and effective. I saw significant improvements in my mobility and strength. The team's expertise in sports medicine and rehabilitation technology exceeded my expectations.<i class="fas fa-quote-right ms-2 text-primary"></i></p>
+                                <h5 id="woman" class="mb-1">Dinara Saduakassova</h5>
+                                <p class="text-muted">Olympic Athlete</p>
+                                <div class="mt-3">
+                                    <span class="badge bg-success me-2">Performance Recovery</span>
+                                    <span class="badge bg-primary">3 Months Program</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 800px;">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img src="res/portrait/Ruslan.png" alt="Ruslan Mammadov" class="rounded-circle img-fluid mx-auto d-block" style="width: 200px; height: 200px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="lead mb-3"><i class="fas fa-quote-left me-2 text-primary"></i>As a marathon runner, recovering from a stress fracture was daunting. The personalized rehabilitation program, combined with their advanced monitoring systems, helped me track my progress and return to running with confidence.<i class="fas fa-quote-right ms-2 text-primary"></i></p>
+                                <h5 class="mb-1">Ruslan Mammadov</h5>
+                                <p class="text-muted">Marathon Runner</p>
+                                <div class="mt-3">
+                                    <span class="badge bg-success me-2">Injury Recovery</span>
+                                    <span class="badge bg-primary">4 Months Program</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators position-relative mt-4">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" class="bg-primary" aria-label="Slide 3"></button>
+            </div>
+        </div>
+
+        <!-- Recovery Statistics -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="text-center">
+                    <div class="display-4 fw-bold text-primary mb-2">95%</div>
+                    <p class="text-muted">Success Rate</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="text-center">
+                    <div class="display-4 fw-bold text-primary mb-2">1000+</div>
+                    <p class="text-muted">Patients Treated</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="text-center">
+                    <div class="display-4 fw-bold text-primary mb-2">30%</div>
+                    <p class="text-muted">Faster Recovery</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="text-center">
+                    <div class="display-4 fw-bold text-primary mb-2">4.9</div>
+                    <p class="text-muted">Patient Rating</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .success-stories {
+            background-color: #f8f9fa;
+        }
+
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(43, 108, 176, 0.1);
+            border-radius: 50%;
+            opacity: 1;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: rgba(43, 108, 176, 0.2);
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-card {
+                text-align: center;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: none;
+            }
+        }
+    </style>
+</section>
+
+    <div class="lightbox" id="imageLightbox">
+        <img src="res/b4.png" alt="Enlarged image">
+    </div>
+
+    <!-- Consultation Modal -->
+    <div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="consultationModalLabel">Book a Consultation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="consultationForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <p id="nameError" style="color: red;"></p> <!-- Error message placeholder -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="preferredDate" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="preferredDate" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="custom-btn-primary" onclick="popalsya()">Submit Request</button>
+                    <button onclick="showDay()">Show Today's Day</button>
+                    <p id="ddd"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- Technology Modal -->
+<div class="modal fade" id="technologyModal" tabindex="-1" aria-labelledby="technologyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="technologyModalLabel">Our Technology</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h6>Digital Rehabilitation Platform</h6>
+                        <p>State-of-the-art digital solutions for personalized rehabilitation programs.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Motion Tracking Systems</h6>
+                        <p>Advanced motion capture technology for precise movement analysis and therapy.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Telerehabilitation Services</h6>
+                        <p>Remote rehabilitation sessions with real-time monitoring and feedback.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Progress Analytics</h6>
+                        <p>Data-driven recovery tracking and performance analysis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="tech.html" class="custom-btn-primary text-decoration-none">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3 class="footer-title h5">RC Clinic KZ</h3>
+                    <p>Kazakhstan's leading digital rehabilitation center, combining innovation with compassionate care.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title h5">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="nav-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tech.html">Tech</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="programs.html">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html">Blog</a>
+                        </li>
+    
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title h5">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Astana, Kazakhstan</li>
+                        <li><i class="fas fa-phone me-2"></i> +7 (727) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@rcclinic.kz</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <div class="text-center">
+                <small>&copy; 2025 RC Clinic KZ. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="SScripts.js"></script>
+    <script>        
+                // Patient Counter Animation
+        const counter = document.querySelector('.progress-count');
+        const progressBar = document.querySelector('.progress-bar');
+        const targetCount = 5000;
+        let currentCount = 0;
+
+        function updateCounter() {
+            if (currentCount < targetCount) {
+                currentCount += 50;
+                counter.textContent = currentCount.toLocaleString();
+                progressBar.style.width = (currentCount / targetCount * 100) + '%';
+                setTimeout(updateCounter, 50);
+            }
+        }
+
+        // Start counter when element is in view
+        const counterObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) updateCounter();
+        });
+        counterObserver.observe(counter);
+    </script>
+</body>
+</html>
