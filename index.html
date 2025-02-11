@@ -138,7 +138,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -182,10 +182,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center hero-text">
-                    <h1 id="centerName" class="display-3 fw-bold mb-4">Kazakhstan's First Digital Rehabilitation Center</h1>
+                    <h1 class="display-3 fw-bold mb-4">Kazakhstan's First Digital Rehabilitation Center</h1>
                     <p class="lead mb-5 fs-4">Pioneering digital healthcare solutions for enhanced recovery and rehabilitation</p>
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                        <button id="bookBtn" type="button" class="custom-btn-primary text-decoration-none btn-lg" data-bs-toggle="modal" data-bs-target="#consultationModal">
+                        <button type="button" class="custom-btn-primary text-decoration-none btn-lg" data-bs-toggle="modal" data-bs-target="#consultationModal">
                             Book a Consultation <i class="fas fa-calendar-alt ms-2"></i>
                         </button>
                         <button type="button" class="custom-btn-secondary text-decoration-none btn-lg" data-bs-toggle="modal" data-bs-target="#technologyModal">
@@ -199,7 +199,7 @@
     <!-- Achievement Banner -->
     <div class="achievement-banner py-3">
         <div class="container">
-            <p id="date" class="text-center mb-0 lead">
+            <p class="text-center mb-0 lead">
                 Proudly partnered with leading global rehabilitation centers
             </p>
         </div>
@@ -210,7 +210,7 @@
     <!-- Mission and Values -->
     <section class="py-5">
         <div class="container">
-            <h2 id="low" class="text-center mb-5">Our Mission & Values</h2>
+            <h2 class="text-center mb-5">Our Mission & Values</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="value-card">
@@ -259,7 +259,7 @@
 <section class="success-stories py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 id="stor" class="display-5 fw-bold mb-3">Success Stories</h2>
+            <h2 class="display-5 fw-bold mb-3">Success Stories</h2>
             <p class="lead text-muted">Real stories from our patients who achieved their recovery goals</p>
         </div>
 
@@ -282,8 +282,8 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <p class="lead mb-3"><i class="fas fa-quote-left me-2 text-primary"></i>After my ACL injury, I thought my football career was over. RC Clinic's innovative approach and dedicated team helped me return to professional football stronger than ever. Their combination of traditional therapy and cutting-edge technology made all the difference.<i class="fas fa-quote-right ms-2 text-primary"></i></p>
-                                <h5 id="patientName" class="mb-1">Azamat Nurlybekov</h5>
-                                <p id="obj" class="text-muted">Professional Football Player</p>
+                                <h5 class="mb-1">Azamat Nurlybekov</h5>
+                                <p class="text-muted">Professional Football Player</p>
                                 <div class="mt-3">
                                     <span class="badge bg-success me-2">Sports Injury</span>
                                     <span class="badge bg-primary">6 Months Recovery</span>
@@ -309,7 +309,7 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <p class="lead mb-3"><i class="fas fa-quote-left me-2 text-primary"></i>The virtual reality therapy sessions were both engaging and effective. I saw significant improvements in my mobility and strength. The team's expertise in sports medicine and rehabilitation technology exceeded my expectations.<i class="fas fa-quote-right ms-2 text-primary"></i></p>
-                                <h5 id="woman" class="mb-1">Dinara Saduakassova</h5>
+                                <h5 class="mb-1">Dinara Saduakassova</h5>
                                 <p class="text-muted">Olympic Athlete</p>
                                 <div class="mt-3">
                                     <span class="badge bg-success me-2">Performance Recovery</span>
@@ -453,44 +453,40 @@
     </div>
 
     <!-- Consultation Modal -->
-    <div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="consultationModalLabel">Book a Consultation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="consultationForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                            <p id="nameError" style="color: red;"></p> <!-- Error message placeholder -->
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="preferredDate" class="form-label">Preferred Date</label>
-                            <input type="date" class="form-control" id="preferredDate" required>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="custom-btn-primary" onclick="popalsya()">Submit Request</button>
-                    <button onclick="showDay()">Show Today's Day</button>
-                    <p id="ddd"></p>
-                </div>
+<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="consultationModalLabel">Book a Consultation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="preferredDate" class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control" id="preferredDate" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="custom-btn-primary">Submit Request</button>
             </div>
         </div>
     </div>
-    
+</div>
 
 <!-- Technology Modal -->
 <div class="modal fade" id="technologyModal" tabindex="-1" aria-labelledby="technologyModalLabel" aria-hidden="true">
@@ -584,8 +580,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="SScripts.js"></script>
-    <script>        
+    <script>
                 // Patient Counter Animation
         const counter = document.querySelector('.progress-count');
         const progressBar = document.querySelector('.progress-bar');

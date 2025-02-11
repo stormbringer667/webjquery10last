@@ -72,7 +72,6 @@
             margin: 0;
             display: -webkit-box;
             -webkit-line-clamp: 6; /* Limit to 6 lines */
-            line-clamp: 6; /* Standard property for compatibility */
             -webkit-box-orient: vertical;
             overflow: hidden;
             height: 144px; /* Fixed height for text: 6 lines * 1.6 line-height * 0.95rem font-size */
@@ -85,7 +84,6 @@
             height: 2.8em; /* Fixed height for 2 lines of title */
             display: -webkit-box;
             -webkit-line-clamp: 2;
-            line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -150,14 +148,7 @@
         </div>
     </nav>
 
-<h2 id = "ser" class="salam">List of Services</h2>
 
-<style>
-    h2 {
-        text-align: center;
-        margin-top: auto;
-    }
-</style>
 <!-- Service Categories -->
 <section class="py-5">
     <div class="container">
@@ -381,6 +372,119 @@
         </div>
     </section>
 
+<!-- Program Recommender Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Find Your Ideal Program</h3>
+                    
+                    <!-- Pain Level -->
+                    <div class="mb-4">
+                        <label class="form-label">What is your current pain level? (1-10)</label>
+                        <input type="range" class="form-range" id="painLevel" min="1" max="10" value="5">
+                        <div class="d-flex justify-content-between">
+                            <small>Mild</small>
+                            <small>Moderate</small>
+                            <small>Severe</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobility Level -->
+                    <div class="mb-4">
+                        <label class="form-label">How would you rate your current mobility?</label>
+                        <select class="form-select" id="mobility">
+                            <option value="Limited">Limited - Need assistance</option>
+                            <option value="Moderate" selected>Moderate - Some limitations</option>
+                            <option value="Good">Good - Minor limitations</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Goals -->
+                    <div class="mb-4">
+                        <label class="form-label">What are your primary rehabilitation goals?</label>
+                        <div class="goals-checkboxes">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Pain Management" id="goal1">
+                                <label class="form-check-label" for="goal1">Pain Management</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Improved Mobility" id="goal2">
+                                <label class="form-check-label" for="goal2">Improved Mobility</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Return to Sports" id="goal3">
+                                <label class="form-check-label" for="goal3">Return to Sports</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Daily Activities" id="goal4">
+                                <label class="form-check-label" for="goal4">Daily Activities</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary btn-lg" id="submitAnswers">
+                            Get Your Personalized Recommendation
+                            <i class="fas fa-chevron-right ms-2"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Results Section -->
+                    <div id="recommendationResult" class="mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Calories Burned Calculator</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body" id="caloriesCalculator">
+                        <div class="mb-4">
+                            <label for="walkingDistance" class="form-label">Distance Walked (km)</label>
+                            <input type="number" class="form-control" id="walkingDistance" min="0" step="0.1">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="foodType" class="form-label">Food Consumed</label>
+                            <select class="form-select" id="foodType">
+                                <option value="burger">Burger</option>
+                                <option value="pizza">Pizza Slice</option>
+                                <option value="rice">Rice Bowl</option>
+                                <option value="vegetables">Vegetable Salad</option>
+                                <option value="chicken-breast">Chicken Breast</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="foodQuantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="foodQuantity" min="1" value="1">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5>Progress Towards Calorie Balance</h5>
+                            <div class="progress">
+                                <div id="caloriesProgress" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div id="caloriesResult" class="alert alert-info">
+                            Enter your activity and food data to see results
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -437,8 +541,12 @@
             </div>
         </div>
     </footer>
-    <script src="SScripts.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="Servscripts.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/main.js"></script>
+
 </html>
