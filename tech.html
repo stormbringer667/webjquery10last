@@ -104,6 +104,7 @@
     </style>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
@@ -312,6 +313,17 @@
         </div>
     </section>
 
+    <section>
+        <h2 class="text-center mb-5">Try to train our new AI Model</h2>
+        <div id="chat-container" class="container mt-5">
+            <div id="chat-box" class="border rounded p-3 mb-3" style="height: 300px; overflow-y: auto; background: #f8f9fa;"></div>
+            <input id="chat-input" type="text" class="form-control" placeholder="Send your message">
+            <button id="send-btn" class="btn btn-primary mt-2">Reply</button>
+        </div>               
+    </section>
+
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -381,7 +393,7 @@
         </div>
       </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script>
+    <script>    
         // Animate progress bars on scroll
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
@@ -406,5 +418,6 @@
           });
         });
         </script>
+<script src="minor.js"></script>
 </body>
 </html>
